@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Calculadora</string>
+    <string name="textNum0">0</string>
+    <string name="textNum1">1</string>
+    <string name="textNum2">2</string>
+    <string name="textNum3">3</string>
+    <string name="textNum4">4</string>
+    <string name="textNum5">5</string>
+    <string name="textNum6">6</string>
+    <string name="textNum7">7</string>
+    <string name="textNum8">8</string>
+    <string name="textNum9">9</string>
+    <string name="textComa">,</string>
+    <string name="textIgual">=</string>
+    <string name="textMas">+</string>
+    <string name="textMenos">-</string>
+    <string name="textMultiplicacion">X</string>
+    <string name="textDivision">/</string>
+    <string name="textCompartir">COMPARTIR</string>
+    <string name="textAc">AC</string>
+</resources>
