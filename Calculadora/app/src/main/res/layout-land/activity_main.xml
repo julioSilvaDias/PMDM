@@ -244,6 +244,8 @@
         android:focusable="false"
         android:gravity="end"
         android:inputType="number"
+        android:textColor="@color/white"
+        android:textSize="70sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonCompartir"
         app:layout_constraintEnd_toStartOf="@+id/buttonNum7"
         app:layout_constraintHorizontal_bias="0.5"
