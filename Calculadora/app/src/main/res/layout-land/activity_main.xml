@@ -11,7 +11,7 @@
     <Button
         android:id="@+id/buttonAc"
         android:layout_width="140dp"
-        android:layout_height="78dp"
+        android:layout_height="76dp"
         android:backgroundTint="@color/colorBotonesOpe"
         android:text="@string/textAc"
         app:layout_constraintBottom_toTopOf="@+id/buttonDivision"
@@ -23,7 +23,7 @@
     <Button
         android:id="@+id/buttonNum0"
         android:layout_width="77dp"
-        android:layout_height="68dp"
+        android:layout_height="76dp"
         android:backgroundTint="@color/colorBotonesNum"
         android:text="@string/textNum0"
         android:textColorLink="#1E3A8A"
@@ -36,7 +36,7 @@
     <Button
         android:id="@+id/buttonMultiplicacion"
         android:layout_width="143dp"
-        android:layout_height="78dp"
+        android:layout_height="76dp"
         android:backgroundTint="@color/colorBotonesOpe"
         android:text="@string/textMultiplicacion"
         app:layout_constraintBottom_toTopOf="@+id/buttonMas"
@@ -48,7 +48,7 @@
     <Button
         android:id="@+id/buttonMas"
         android:layout_width="145dp"
-        android:layout_height="78dp"
+        android:layout_height="76dp"
         android:backgroundTint="@color/colorBotonesOpe"
         android:text="@string/textMas"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -60,7 +60,7 @@
     <Button
         android:id="@+id/buttonIgual"
         android:layout_width="75dp"
-        android:layout_height="73dp"
+        android:layout_height="76dp"
         android:backgroundTint="@color/colorBotonesOpe"
         android:text="@string/textIgual"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -84,7 +84,7 @@
     <Button
         android:id="@+id/buttonDivision"
         android:layout_width="142dp"
-        android:layout_height="78dp"
+        android:layout_height="76dp"
         android:backgroundTint="@color/colorBotonesOpe"
         android:text="@string/textDivision"
         app:layout_constraintBottom_toTopOf="@+id/buttonMenos"
@@ -96,7 +96,7 @@
     <Button
         android:id="@+id/buttonComa"
         android:layout_width="78dp"
-        android:layout_height="69dp"
+        android:layout_height="76dp"
         android:backgroundTint="@color/colorBotonesNum"
         android:text="@string/textComa"
         android:textColorLink="#1E3A8A"
@@ -109,7 +109,7 @@
     <Button
         android:id="@+id/buttonCompartir"
         android:layout_width="138dp"
-        android:layout_height="70dp"
+        android:layout_height="76dp"
         android:backgroundTint="@color/colorBotonesOpe"
         android:text="@string/textCompartir"
         app:layout_constraintBottom_toTopOf="@+id/buttonMultiplicacion"
