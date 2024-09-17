@@ -26,6 +26,7 @@
         android:layout_height="76dp"
         android:backgroundTint="@color/colorBotonesOpe"
         android:text="@string/textMenos"
+        android:textSize="34dp"
         app:layout_constraintBottom_toTopOf="@+id/buttonMas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

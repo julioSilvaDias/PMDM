@@ -40,57 +40,103 @@ class MainActivity : AppCompatActivity() {
         val btnAc = findViewById<Button>(R.id.buttonAc)
 
         num0.setOnClickListener{
-            var textoActual = editText.text.toString()
+            val textoActual = editText.text.toString()
             editText.setText(textoActual + "0")
         }
 
         num1.setOnClickListener{
-            var textoActual = editText.text.toString()
+            val textoActual = editText.text.toString()
             editText.setText(textoActual + "1")
         }
 
         num2.setOnClickListener{
-            var textoActual = editText.text.toString()
+            val textoActual = editText.text.toString()
             editText.setText(textoActual + "2")
         }
 
         num3.setOnClickListener{
-            var textoActual = editText.text.toString()
+            val textoActual = editText.text.toString()
             editText.setText(textoActual + "3")
         }
 
         num4.setOnClickListener{
-            var textoActual = editText.text.toString()
+            val textoActual = editText.text.toString()
             editText.setText(textoActual + "4")
         }
         num5.setOnClickListener{
-            var textoActual = editText.text.toString()
+            val textoActual = editText.text.toString()
             editText.setText(textoActual + "5")
         }
 
         num6.setOnClickListener{
-            var textoActual = editText.text.toString()
+            val textoActual = editText.text.toString()
             editText.setText(textoActual + "6")
         }
 
         num7.setOnClickListener{
-            var textoActual = editText.text.toString()
+            val textoActual = editText.text.toString()
             editText.setText(textoActual + "7")
         }
 
         num8.setOnClickListener{
-            var textoActual = editText.text.toString()
+            val textoActual = editText.text.toString()
             editText.setText(textoActual + "8")
         }
 
         num9.setOnClickListener{
-            var textoActual = editText.text.toString()
+            val textoActual = editText.text.toString()
             editText.setText(textoActual + "9")
         }
 
         btnAc.setOnClickListener{
             editText.setText("")
         }
+
+        btnComa.setOnClickListener{
+            val textoActual = editText.text.toString()
+            editText.setText(textoActual + ",")
+        }
+
+        num9.setOnClickListener{
+            val textoActual = editText.text.toString()
+            editText.setText(textoActual + "9")
+        }
+
+        btnDiv.setOnClickListener{
+            val textoActual = editText.text.toString()
+            editText.setText(textoActual + "/")
+        }
+
+        btnSum.setOnClickListener{
+            val textoActual = editText.text.toString()
+            editText.setText(textoActual + "+")
+        }
+
+        btnRes.setOnClickListener{
+            val textoActual = editText.text.toString()
+            editText.setText(textoActual + "-")
+        }
+
+        btnSum.setOnClickListener{
+            val textoActual = editText.text.toString()
+            editText.setText(textoActual + "+")
+        }
+
+        btnMult.setOnClickListener{
+            val textoActual = editText.text.toString()
+            editText.setText(textoActual + "X")
+        }
+
+        btnIgual.setOnClickListener{
+            val textoActual = editText.text.toString()
+            operaciones(textoActual)
+
+        }
+    }
+
+    fun operaciones(operacion:String){
+        ;
+
 
     }
 }
