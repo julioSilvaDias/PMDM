@@ -1,142 +1,96 @@
 package com.example.calculadora
 
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
+    private var operationDone: Boolean = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
 
-        val editText = findViewById<EditText>(R.id.editTextNumber)
-        val num0 = findViewById<Button>(R.id.buttonNum0)
-        val num1 = findViewById<Button>(R.id.buttonNum1)
-        val num2 = findViewById<Button>(R.id.buttonNum2)
-        val num3 = findViewById<Button>(R.id.buttonNum3)
-        val num4 = findViewById<Button>(R.id.buttonNum4)
-        val num5 = findViewById<Button>(R.id.buttonNum5)
-        val num6 = findViewById<Button>(R.id.buttonNum6)
-        val num7 = findViewById<Button>(R.id.buttonNum7)
-        val num8 = findViewById<Button>(R.id.buttonNum8)
-        val num9 = findViewById<Button>(R.id.buttonNum9)
-        val btnComa = findViewById<Button>(R.id.buttonComa)
-        val btnIgual = findViewById<Button>(R.id.buttonIgual)
-        val btnSum = findViewById<Button>(R.id.buttonMas)
-        val btnRes = findViewById<Button>(R.id.buttonMenos)
-        val btnMult = findViewById<Button>(R.id.buttonMultiplicacion)
-        val btnDiv = findViewById<Button>(R.id.buttonDivision)
-        val btnCompart = findViewById<Button>(R.id.buttonCompartir)
-        val btnAc = findViewById<Button>(R.id.buttonAc)
+        findViewById<TextView>(R.id.textViewNum1).visibility = View.GONE
 
-        num0.setOnClickListener{
-            val textoActual = editText.text.toString()
-            editText.setText(textoActual + "0")
-        }
-
-        num1.setOnClickListener{
-            val textoActual = editText.text.toString()
-            editText.setText(textoActual + "1")
-        }
-
-        num2.setOnClickListener{
-            val textoActual = editText.text.toString()
-            editText.setText(textoActual + "2")
-        }
-
-        num3.setOnClickListener{
-            val textoActual = editText.text.toString()
-            editText.setText(textoActual + "3")
-        }
-
-        num4.setOnClickListener{
-            val textoActual = editText.text.toString()
-            editText.setText(textoActual + "4")
-        }
-        num5.setOnClickListener{
-            val textoActual = editText.text.toString()
-            editText.setText(textoActual + "5")
-        }
-
-        num6.setOnClickListener{
-            val textoActual = editText.text.toString()
-            editText.setText(textoActual + "6")
-        }
-
-        num7.setOnClickListener{
-            val textoActual = editText.text.toString()
-            editText.setText(textoActual + "7")
-        }
-
-        num8.setOnClickListener{
-            val textoActual = editText.text.toString()
-            editText.setText(textoActual + "8")
-        }
-
-        num9.setOnClickListener{
-            val textoActual = editText.text.toString()
-            editText.setText(textoActual + "9")
-        }
-
-        btnAc.setOnClickListener{
-            editText.setText("")
-        }
-
-        btnComa.setOnClickListener{
-            val textoActual = editText.text.toString()
-            editText.setText(textoActual + ",")
-        }
-
-        num9.setOnClickListener{
-            val textoActual = editText.text.toString()
-            editText.setText(textoActual + "9")
-        }
-
-        btnDiv.setOnClickListener{
-            val textoActual = editText.text.toString()
-            editText.setText(textoActual + "/")
-        }
-
-        btnSum.setOnClickListener{
-            val textoActual = editText.text.toString()
-            editText.setText(textoActual + "+")
-        }
-
-        btnRes.setOnClickListener{
-            val textoActual = editText.text.toString()
-            editText.setText(textoActual + "-")
-        }
-
-        btnSum.setOnClickListener{
-            val textoActual = editText.text.toString()
-            editText.setText(textoActual + "+")
-        }
-
-        btnMult.setOnClickListener{
-            val textoActual = editText.text.toString()
-            editText.setText(textoActual + "X")
-        }
-
-        btnIgual.setOnClickListener{
-            val textoActual = editText.text.toString()
-            operaciones(textoActual)
-
-        }
+        findViewById<Button>(R.id.buttonNum1).setOnClickListener(this)
+        findViewById<Button>(R.id.buttonNum2).setOnClickListener(this)
+        findViewById<Button>(R.id.buttonNum3).setOnClickListener(this)
+        findViewById<Button>(R.id.buttonNum4).setOnClickListener(this)
+        findViewById<Button>(R.id.buttonNum5).setOnClickListener(this)
+        findViewById<Button>(R.id.buttonNum6).setOnClickListener(this)
+        findViewById<Button>(R.id.buttonNum7).setOnClickListener(this)
+        findViewById<Button>(R.id.buttonNum8).setOnClickListener(this)
+        findViewById<Button>(R.id.buttonNum9).setOnClickListener(this)
+        findViewById<Button>(R.id.buttonNum0).setOnClickListener(this)
+        findViewById<Button>(R.id.buttonMas).setOnClickListener(this)
+        findViewById<Button>(R.id.buttonMenos).setOnClickListener(this)
+        findViewById<Button>(R.id.buttonIgual).setOnClickListener(this)
     }
 
-    fun operaciones(operacion:String){
-        ;
+    @SuppressLint("SetTextI18n")
+    override fun onClick(view: View?) {
+        val textView: TextView = findViewById(R.id.textViewNum)
+        findViewById<TextView>(R.id.textViewNum1).visibility = View.GONE
 
+        if (operationDone) {
+            textView.text = ""
+            operationDone = false
+        } else {
+            when (view?.id) {
+                R.id.buttonNum1 -> textView.text =
+                    textView.text.toString() + getString(R.string.txt_one)
 
+                R.id.buttonNum2 -> textView.text =
+                    textView.text.toString() + getString(R.string.txt_two)
+
+                R.id.buttonNum3 -> textView.text =
+                    textView.text.toString() + getString(R.string.txt_three)
+
+                R.id.buttonNum4 -> textView.text =
+                    textView.text.toString() + getString(R.string.txt_four)
+
+                R.id.buttonNum5 -> textView.text =
+                    textView.text.toString() + getString(R.string.txt_five)
+
+                R.id.buttonNum6 -> textView.text =
+                    textView.text.toString() + getString(R.string.txt_six)
+
+                R.id.buttonNum7 -> textView.text =
+                    textView.text.toString() + getString(R.string.txt_seven)
+
+                R.id.buttonNum8 -> textView.text =
+                    textView.text.toString() + getString(R.string.txt_eight)
+
+                R.id.buttonNum9 -> textView.text =
+                    textView.text.toString() + getString(R.string.txt_nine)
+
+                R.id.buttonNum0 -> textView.text =
+                    textView.text.toString() + getString(R.string.txt_zero)
+
+                R.id.buttonMas -> textView.text =
+                    textView.text.toString() + getString(R.string.txt_add)
+
+                R.id.buttonMenos -> textView.text =
+                    textView.text.toString() + getString(R.string.txt_substract)
+
+                R.id.buttonResult -> {
+                    try {
+                        textView.text = doOperation(textView.text.toString())
+                        operationDone = true
+                    } catch (e: Exception) {
+                        findViewById<TextView>(R.id.textError).visibility = View.VISIBLE
+                        textView.text = ""
+                    }
+                }
+            }
+        }
     }
 }

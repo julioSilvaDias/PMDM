@@ -9,57 +9,16 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/buttonAc"
+        android:id="@+id/buttonCompartir"
         android:layout_width="145dp"
         android:layout_height="76dp"
         android:backgroundTint="@color/colorBotonesOpe"
-        android:text="@string/textAc"
-        android:textSize="34dp"
+        android:text="@string/textCompartir"
         app:layout_constraintBottom_toTopOf="@+id/buttonDivision"
-        app:layout_constraintEnd_toStartOf="@+id/buttonCompartir"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
-
-    <Button
-        android:id="@+id/buttonNum0"
-        android:layout_width="77dp"
-        android:layout_height="76dp"
-        android:backgroundTint="@color/colorBotonesNum"
-        android:text="@string/textNum0"
-        android:textColorLink="#1E3A8A"
-        android:textSize="34dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonComa"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonMas"
-        app:layout_constraintTop_toBottomOf="@+id/buttonNum1" />
-
-    <Button
-        android:id="@+id/buttonMultiplicacion"
-        android:layout_width="145dp"
-        android:layout_height="76dp"
-        android:backgroundTint="@color/colorBotonesOpe"
-        android:text="@string/textMultiplicacion"
-        android:textSize="34dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonMas"
-        app:layout_constraintEnd_toStartOf="@+id/buttonNum1"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonDivision"
-        app:layout_constraintTop_toBottomOf="@+id/buttonCompartir" />
-
-    <Button
-        android:id="@+id/buttonMas"
-        android:layout_width="145dp"
-        android:layout_height="76dp"
-        android:backgroundTint="@color/colorBotonesOpe"
-        android:text="@string/textMas"
-        android:textSize="34dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonNum0"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonMenos"
-        app:layout_constraintTop_toBottomOf="@+id/buttonMultiplicacion" />
+        app:layout_constraintStart_toEndOf="@+id/buttonAc"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNum" />
 
     <Button
         android:id="@+id/buttonIgual"
@@ -75,154 +34,31 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonNum3" />
 
     <Button
-        android:id="@+id/buttonMenos"
-        android:layout_width="145dp"
-        android:layout_height="76dp"
-        android:backgroundTint="@color/colorBotonesOpe"
-        android:text="@string/textMenos"
-        android:textSize="34dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonMas"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonDivision" />
-
-    <Button
         android:id="@+id/buttonDivision"
         android:layout_width="145dp"
         android:layout_height="76dp"
         android:backgroundTint="@color/colorBotonesOpe"
         android:text="@string/textDivision"
         android:textSize="34dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonMenos"
-        app:layout_constraintEnd_toStartOf="@+id/buttonMultiplicacion"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMas"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAc" />
+        app:layout_constraintStart_toEndOf="@+id/buttonMultiplicacion"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCompartir" />
 
     <Button
-        android:id="@+id/buttonComa"
+        android:id="@+id/buttonNum0"
         android:layout_width="77dp"
         android:layout_height="76dp"
         android:backgroundTint="@color/colorBotonesNum"
-        android:text="@string/textComa"
+        android:text="@string/textNum0"
         android:textColorLink="#1E3A8A"
         android:textSize="34dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonIgual"
+        app:layout_constraintEnd_toStartOf="@+id/buttonComa"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonNum0"
-        app:layout_constraintTop_toBottomOf="@+id/buttonNum2" />
-
-    <Button
-        android:id="@+id/buttonCompartir"
-        android:layout_width="145dp"
-        android:layout_height="76dp"
-        android:backgroundTint="@color/colorBotonesOpe"
-        android:text="@string/textCompartir"
-        app:layout_constraintBottom_toTopOf="@+id/buttonMultiplicacion"
-        app:layout_constraintEnd_toStartOf="@+id/buttonNum4"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonAc"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
-
-    <Button
-        android:id="@+id/buttonNum9"
-        android:layout_width="77dp"
-        android:layout_height="76dp"
-        android:backgroundTint="@color/colorBotonesNum"
-        android:text="@string/textNum9"
-        android:textColorLink="#1E3A8A"
-        android:textSize="34dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonNum6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonNum8"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/buttonNum3"
-        android:layout_width="77dp"
-        android:layout_height="76dp"
-        android:backgroundTint="@color/colorBotonesNum"
-        android:text="@string/textNum3"
-        android:textColorLink="#1E3A8A"
-        android:textSize="34dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonIgual"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonNum2"
-        app:layout_constraintTop_toBottomOf="@+id/buttonNum6" />
-
-    <Button
-        android:id="@+id/buttonNum2"
-        android:layout_width="77dp"
-        android:layout_height="76dp"
-        android:backgroundTint="@color/colorBotonesNum"
-        android:text="@string/textNum2"
-        android:textColorLink="#1E3A8A"
-        android:textSize="34dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonComa"
-        app:layout_constraintEnd_toStartOf="@+id/buttonNum3"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonNum1"
-        app:layout_constraintTop_toBottomOf="@+id/buttonNum5" />
-
-    <Button
-        android:id="@+id/buttonNum1"
-        android:layout_width="77dp"
-        android:layout_height="76dp"
-        android:backgroundTint="@color/colorBotonesNum"
-        android:text="@string/textNum1"
-        android:textColorLink="#1E3A8A"
-        android:textSize="34dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonNum0"
-        app:layout_constraintEnd_toStartOf="@+id/buttonNum2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonMultiplicacion"
-        app:layout_constraintTop_toBottomOf="@+id/buttonNum4" />
-
-    <Button
-        android:id="@+id/buttonNum6"
-        android:layout_width="77dp"
-        android:layout_height="76dp"
-        android:backgroundTint="@color/colorBotonesNum"
-        android:text="@string/textNum6"
-        android:textColorLink="#1E3A8A"
-        android:textSize="34dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonNum3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonNum5"
-        app:layout_constraintTop_toBottomOf="@+id/buttonNum9" />
-
-    <Button
-        android:id="@+id/buttonNum4"
-        android:layout_width="77dp"
-        android:layout_height="76dp"
-        android:backgroundTint="@color/colorBotonesNum"
-        android:text="@string/textNum4"
-        android:textColorLink="#1E3A8A"
-        android:textSize="34dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonNum1"
-        app:layout_constraintEnd_toStartOf="@+id/buttonNum5"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonCompartir"
-        app:layout_constraintTop_toBottomOf="@+id/buttonNum7" />
-
-    <Button
-        android:id="@+id/buttonNum5"
-        android:layout_width="77dp"
-        android:layout_height="76dp"
-        android:backgroundTint="@color/colorBotonesNum"
-        android:text="@string/textNum5"
-        android:textColorLink="#1E3A8A"
-        android:textSize="34dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonNum2"
-        app:layout_constraintEnd_toStartOf="@+id/buttonNum6"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonNum4"
-        app:layout_constraintTop_toBottomOf="@+id/buttonNum8" />
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/buttonNum1" />
 
     <Button
         android:id="@+id/buttonNum8"
@@ -239,6 +75,115 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/buttonNum6"
+        android:layout_width="77dp"
+        android:layout_height="76dp"
+        android:backgroundTint="@color/colorBotonesNum"
+        android:text="@string/textNum6"
+        android:textColorLink="#1E3A8A"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonNum3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonNum5"
+        app:layout_constraintTop_toBottomOf="@+id/buttonNum9" />
+
+    <Button
+        android:id="@+id/buttonAc"
+        android:layout_width="145dp"
+        android:layout_height="76dp"
+        android:backgroundTint="@color/colorBotonesOpe"
+        android:text="@string/textAc"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMultiplicacion"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCompartir"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNum" />
+
+    <Button
+        android:id="@+id/buttonNum5"
+        android:layout_width="77dp"
+        android:layout_height="76dp"
+        android:backgroundTint="@color/colorBotonesNum"
+        android:text="@string/textNum5"
+        android:textColorLink="#1E3A8A"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonNum2"
+        app:layout_constraintEnd_toStartOf="@+id/buttonNum6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonNum4"
+        app:layout_constraintTop_toBottomOf="@+id/buttonNum8" />
+
+    <Button
+        android:id="@+id/buttonNum1"
+        android:layout_width="77dp"
+        android:layout_height="76dp"
+        android:backgroundTint="@color/colorBotonesNum"
+        android:text="@string/textNum1"
+        android:textColorLink="#1E3A8A"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonNum0"
+        app:layout_constraintEnd_toStartOf="@+id/buttonNum2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/buttonNum4" />
+
+    <Button
+        android:id="@+id/buttonMas"
+        android:layout_width="145dp"
+        android:layout_height="76dp"
+        android:backgroundTint="@color/colorBotonesOpe"
+        android:text="@string/textMas"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonMenos"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDivision" />
+
+    <Button
+        android:id="@+id/buttonComa"
+        android:layout_width="77dp"
+        android:layout_height="76dp"
+        android:backgroundTint="@color/colorBotonesNum"
+        android:text="@string/textComa"
+        android:textColorLink="#1E3A8A"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonIgual"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonNum0"
+        app:layout_constraintTop_toBottomOf="@+id/buttonNum2" />
+
+    <Button
+        android:id="@+id/buttonMenos"
+        android:layout_width="145dp"
+        android:layout_height="76dp"
+        android:backgroundTint="@color/colorBotonesOpe"
+        android:text="@string/textMenos"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonMas"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMultiplicacion" />
+
+    <Button
+        android:id="@+id/buttonNum2"
+        android:layout_width="77dp"
+        android:layout_height="76dp"
+        android:backgroundTint="@color/colorBotonesNum"
+        android:text="@string/textNum2"
+        android:textColorLink="#1E3A8A"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonComa"
+        app:layout_constraintEnd_toStartOf="@+id/buttonNum3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonNum1"
+        app:layout_constraintTop_toBottomOf="@+id/buttonNum5" />
+
+    <Button
         android:id="@+id/buttonNum7"
         android:layout_width="77dp"
         android:layout_height="76dp"
@@ -249,23 +194,96 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonNum4"
         app:layout_constraintEnd_toStartOf="@+id/buttonNum8"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/editTextNumber"
+        app:layout_constraintStart_toEndOf="@+id/divider"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/editTextNumber"
-        android:layout_width="353dp"
+    <Button
+        android:id="@+id/buttonMultiplicacion"
+        android:layout_width="145dp"
         android:layout_height="76dp"
-        android:background="@null"
-        android:ems="10"
-        android:focusable="false"
-        android:gravity="end"
-        android:inputType="number"
-        android:textColor="@color/white"
-        android:textSize="70sp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonCompartir"
-        app:layout_constraintEnd_toStartOf="@+id/buttonNum7"
+        android:backgroundTint="@color/colorBotonesOpe"
+        android:text="@string/textMultiplicacion"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMenos"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDivision"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAc" />
+
+    <Button
+        android:id="@+id/buttonNum3"
+        android:layout_width="77dp"
+        android:layout_height="76dp"
+        android:backgroundTint="@color/colorBotonesNum"
+        android:text="@string/textNum3"
+        android:textColorLink="#1E3A8A"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonIgual"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonNum2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonNum6" />
+
+    <Button
+        android:id="@+id/buttonNum4"
+        android:layout_width="77dp"
+        android:layout_height="76dp"
+        android:backgroundTint="@color/colorBotonesNum"
+        android:text="@string/textNum4"
+        android:textColorLink="#1E3A8A"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonNum1"
+        app:layout_constraintEnd_toStartOf="@+id/buttonNum5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/buttonNum7" />
+
+    <Button
+        android:id="@+id/buttonNum9"
+        android:layout_width="77dp"
+        android:layout_height="76dp"
+        android:backgroundTint="@color/colorBotonesNum"
+        android:text="@string/textNum9"
+        android:textColorLink="#1E3A8A"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonNum6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonNum8"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="1dp"
+        android:layout_height="409dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="3dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonNum0"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonMas"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewNum"
+        android:layout_width="325dp"
+        android:layout_height="58dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCompartir"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNum1" />
+
+    <TextView
+        android:id="@+id/textViewNum1"
+        android:layout_width="173dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="150dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/textViewNum"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
