@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
     private var operationDone: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,54 +43,76 @@ class MainActivity : AppCompatActivity() {
         if (operationDone) {
             textView.text = ""
             operationDone = false
-        } else {
-            when (view?.id) {
-                R.id.buttonNum1 -> textView.text =
-                    textView.text.toString() + getString(R.string.txt_one)
+        }
 
-                R.id.buttonNum2 -> textView.text =
-                    textView.text.toString() + getString(R.string.txt_two)
-
-                R.id.buttonNum3 -> textView.text =
-                    textView.text.toString() + getString(R.string.txt_three)
-
-                R.id.buttonNum4 -> textView.text =
-                    textView.text.toString() + getString(R.string.txt_four)
-
-                R.id.buttonNum5 -> textView.text =
-                    textView.text.toString() + getString(R.string.txt_five)
-
-                R.id.buttonNum6 -> textView.text =
-                    textView.text.toString() + getString(R.string.txt_six)
-
-                R.id.buttonNum7 -> textView.text =
-                    textView.text.toString() + getString(R.string.txt_seven)
-
-                R.id.buttonNum8 -> textView.text =
-                    textView.text.toString() + getString(R.string.txt_eight)
-
-                R.id.buttonNum9 -> textView.text =
-                    textView.text.toString() + getString(R.string.txt_nine)
-
-                R.id.buttonNum0 -> textView.text =
-                    textView.text.toString() + getString(R.string.txt_zero)
-
-                R.id.buttonMas -> textView.text =
-                    textView.text.toString() + getString(R.string.txt_add)
-
-                R.id.buttonMenos -> textView.text =
-                    textView.text.toString() + getString(R.string.txt_substract)
-
-                R.id.buttonResult -> {
-                    try {
-                        textView.text = doOperation(textView.text.toString())
-                        operationDone = true
-                    } catch (e: Exception) {
-                        findViewById<TextView>(R.id.textError).visibility = View.VISIBLE
-                        textView.text = ""
-                    }
+        when (view?.id) {
+            R.id.buttonNum1 -> textView.text = textView.text.toString() + getString(R.string.textNum1)
+            R.id.buttonNum2 -> textView.text = textView.text.toString() + getString(R.string.textNum2)
+            R.id.buttonNum3 -> textView.text = textView.text.toString() + getString(R.string.textNum3)
+            R.id.buttonNum4 -> textView.text = textView.text.toString() + getString(R.string.textNum4)
+            R.id.buttonNum5 -> textView.text = textView.text.toString() + getString(R.string.textNum5)
+            R.id.buttonNum6 -> textView.text = textView.text.toString() + getString(R.string.textNum6)
+            R.id.buttonNum7 -> textView.text = textView.text.toString() + getString(R.string.textNum7)
+            R.id.buttonNum8 -> textView.text = textView.text.toString() + getString(R.string.textNum8)
+            R.id.buttonNum9 -> textView.text = textView.text.toString() + getString(R.string.textNum9)
+            R.id.buttonNum0 -> textView.text = textView.text.toString() + getString(R.string.textNum0)
+            R.id.buttonMas -> textView.text = textView.text.toString() + getString(R.string.textMas)
+            R.id.buttonMenos -> textView.text = textView.text.toString() + getString(R.string.textMenos)
+            R.id.buttonIgual -> {
+                try {
+                    // Aquí puedes implementar la lógica de la operación en el futuro
+                    operationDone = true
+                } catch (e: Exception) {
+                    findViewById<TextView>(R.id.textViewNum1).visibility = View.VISIBLE
+                    textView.text = ""
                 }
             }
         }
     }
+}
+
+
+@Throws(Exception::class)
+fun doOperation(operation: String): String? {
+    var ret: String? = null
+    var firstNumber = ""
+    var lastNumber = ""
+    if (isAddition(operation)) {
+        firstNumber = operation.substring(0, operation.lastIndexOf("+"))
+        lastNumber = operation.substring(operation.lastIndexOf("+") + 1)
+        ret =
+            "" + add(firstNumber.trim { it <= ' ' }.toInt(),
+                lastNumber.trim { it <= ' ' }.toInt())
+    } else if (isSubtraction(operation)) {
+        firstNumber = operation.substring(0, operation.lastIndexOf("-"))
+        lastNumber = operation.substring(operation.lastIndexOf("-") + 1)
+        ret = "" + substract(firstNumber.trim { it <= ' ' }.toInt(),
+            lastNumber.trim { it <= ' ' }.toInt()
+        )
+    }
+    return ret
+}
+
+private fun isAddition(operation: String): Boolean {
+    var ret = false
+    val countAdd = operation.length - operation.replace("+", "").length
+    val countSubs = operation.length - operation.replace("-", "").length
+    if (countAdd == 1 && countSubs == 0) ret = true
+    return ret
+}
+
+private fun isSubtraction(operation: String): Boolean {
+    var ret = false
+    val countAdd = operation.length - operation.replace("-", "").length
+    val countSubs = operation.length - operation.replace("+", "").length
+    if (countAdd == 1 && countSubs == 0) ret = true
+    return ret
+}
+
+private fun add(op1: Int, op2: Int): Int {
+    return op1 + op2
+}
+
+private fun substract(op1: Int, op2: Int): Int {
+    return op1 - op2
 }
