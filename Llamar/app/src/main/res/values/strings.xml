@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Llamar</string>
+    <string name="pulsParaLlamar">Pulsa para llamar a Walter White</string>
+    <string name="llamando">Llamando a Walter White...</string>
+    <string name="llamadaTerminada">Lamada terminada</string>
+</resources>

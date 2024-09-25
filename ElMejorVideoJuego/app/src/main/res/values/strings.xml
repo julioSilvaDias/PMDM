@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ElMejorVideoJuego</string>
+    <string name="txtPregunta1">¿Cual es el mejor videojuego?</string>
+    <string name="txtEleccion1">A ver cual escoges...</string>
+    <string name="txtFallout4">Fallout4</string>
+    <string name="lol">Leage of Legends</string>
+    <string name="Fortinite">Fortnite</string>
+    <string name="TeamFortress2">Team Fortress2</string>
+    <string name="txtPregunta2">¿Te gusta la encuesta?</string>
+    <string name="mola">Si que te mola</string>
+    <string name="noMola">¡¿No te molan!?</string>
+    <string name="txtEleccionFallout">Veo que te gusta el Fallout4</string>
+    <string name="txtEleccionLol">Veo que te gusta el Leage of Legends</string>
+    <string name="txtEleccionFortnite">Veo que te gusta el Fortnite</string>
+    <string name="txtEleccionTeam">Veo que te gusta el Team Fortress2</string>
+</resources>
