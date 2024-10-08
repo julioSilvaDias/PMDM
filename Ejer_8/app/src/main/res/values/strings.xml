@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Ejer_8</string>
+    <string name="textInfo">Aqui saldra tu eleccion</string>
+    <string name="textButton">Elige tu provincia</string>
+    <string name="bizkaia">Bizkaia</string>
+    <string name="gipuzkua">Gipuzkua</string>
+    <string name="araba">Araba</string>
+    <string name="navarra">Navarra</string>
+    <string name="lapundi">Lapundi</string>
+    <string name="zuberoa">Zuberoa</string>
+    <string name="portugalete">Portugalete</string>
+</resources>

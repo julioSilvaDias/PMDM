@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProvinciaActivity">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="179dp"
+        android:layout_height="348dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.017">
+
+        <RadioButton
+            android:id="@+id/provBizkaia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bizkaia" />
+
+        <RadioButton
+            android:id="@+id/provGipuzkoa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gipuzkua" />
+
+        <RadioButton
+            android:id="@+id/provAraba"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/araba" />
+
+        <RadioButton
+            android:id="@+id/provNavarra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/navarra" />
+
+        <RadioButton
+            android:id="@+id/provLapurdi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lapundi" />
+
+        <RadioButton
+            android:id="@+id/provZuberoa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/zuberoa" />
+
+        <RadioButton
+            android:id="@+id/provPortugalete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/portugalete" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/textButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.639" />
+</androidx.constraintlayout.widget.ConstraintLayout>
